@@ -1,212 +1,277 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReVibe</title>
 
-    <title>ReVibe – Reselling Shop</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    <link rel="stylesheet" href="style.css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            color: #111;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 25px;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .contact-btn {
+            background: white;
+            color: #111;
+            border: none;
+            padding: 11px 18px;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 55px 20px 35px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #666;
+            font-size: 17px;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product {
+            background: white;
+            width: 340px;
+            border-radius: 18px;
+            padding: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.13);
+        }
+
+        .product img {
+            width: 100%;
+            height: 280px;
+            object-fit: contain;
+            display: block;
+            border-radius: 12px;
+            background: #f1f1f1;
+        }
+
+        .product-info {
+            padding: 15px 3px 3px;
+        }
+
+        .product-info h2 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+
+        .product-info p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            font-size: 21px;
+            font-weight: 900;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background: white;
+            width: 100%;
+            max-width: 420px;
+            max-height: 90vh;
+            overflow-y: auto;
+            border-radius: 20px;
+            padding: 22px;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            font-size: 28px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .popup-content img {
+            width: 100%;
+            max-height: 330px;
+            object-fit: contain;
+            border-radius: 12px;
+            background: #f1f1f1;
+            margin-bottom: 15px;
+        }
+
+        .popup-content h2 {
+            font-size: 25px;
+            font-weight: 900;
+            margin-bottom: 8px;
+        }
+
+        .popup-price {
+            font-size: 22px;
+            font-weight: 900;
+            margin: 12px 0;
+        }
+
+        .popup-text {
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 18px;
+        }
+
+        .contact-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-options a {
+            text-decoration: none;
+            text-align: center;
+            padding: 13px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .email {
+            background: #111;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            color: #777;
+            font-size: 13px;
+            padding: 45px 20px 25px;
+        }
+
+        @media (max-width: 500px) {
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .product {
+                width: 100%;
+                max-width: 340px;
+            }
+
+            .product img {
+                height: 250px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
+<header>
+    <div class="logo">ReVibe</div>
 
-    <nav>
+    <button class="contact-btn" onclick="openContact()">
+        Kontakt
+    </button>
+</header>
 
-        <div class="logo">
-            ReVibe
+<section class="hero">
+    <h1>ReVibe</h1>
+    <p>Dein Style. Dein Vibe.</p>
+</section>
+
+<section class="products">
+
+    <div class="product" onclick="openProduct()">
+
+        <img src="Nike.jpeg" alt="Nike Zipper Set">
+
+        <div class="product-info">
+            <h2>Nike Zipper Set</h2>
+            <p>Grauer Zipper mit passender Hose</p>
+            <div class="price">39,99 €</div>
         </div>
 
-        <div class="nav-links">
+    </div>
 
-            <a href="#home">Home</a>
-            <a href="#produkte">Produkte</a>
-            <a href="#ueber-uns">Über uns</a>
-            <a href="#kontakt">Kontakt</a>
+</section>
 
+<footer>
+    © 2026 ReVibe
+</footer>
+
+<!-- PRODUKT-FENSTER -->
+<div class="popup" id="productPopup">
+
+    <div class="popup-content">
+
+        <span class="close" onclick="closeProduct()">×</span>
+
+        <img src="Nike.jpeg" alt="Nike Zipper Set">
+
+        <h2>Nike Zipper Set</h2>
+
+        <div class="popup-price">
+            39,99 €
         </div>
 
-    </nav>
-
-
-    <main>
-
-        <!-- HOME -->
-
-        <section id="home" class="hero">
-
-            <p class="welcome">
-                ♻️ WILLKOMMEN BEI REVIBE
-            </p>
-
-            <h1>
-                Gute Sachen.<br>
-                <span>Neue Besitzer.</span>
-            </h1>
-
-            <p class="description">
-                Entdecke gebrauchte Produkte zu fairen Preisen.
-                Gute Sachen verdienen eine zweite Chance.
-            </p>
-
-            <a href="#produkte" class="button">
-                Produkte entdecken →
-            </a>
-
-        </section>
-
-
-        <!-- PRODUKTE -->
-
-        <section id="produkte" class="produkte">
-
-            <p class="section-label">
-                UNSER SHOP
-            </p>
-
-            <h2>
-                Aktuelles Produkt
-            </h2>
-
-
-            <div class="product-grid">
-
-                <div class="product-card">
-
-                    <div class="product-image">
-
-                        <img
-                            src="bilder/Nike.jpeg"
-                            alt="Nike Zipper mit passender Hose">
-
-                    </div>
-
-
-                    <h3>
-                        Nike Zipper + Hose
-                    </h3>
-
-
-                    <p>
-                        Grauer Nike Zipper mit passender Hose.
-                        Sehr guter Zustand und bereit für einen neuen Besitzer.
-                    </p>
-
-
-                    <div class="product-bottom">
-
-                        <span>
-                            49,99 €
-                        </span>
-
-                        <a href="produkt.html" class="button">
-                            Ansehen
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ÜBER UNS -->
-
-        <section id="ueber-uns" class="ueber-uns">
-
-            <p class="section-label">
-                ÜBER REVIBE
-            </p>
-
-            <h2>
-                Warum ReVibe?
-            </h2>
-
-            <p>
-                ReVibe gibt gebrauchten Produkten eine zweite Chance.
-                Gute Sachen verdienen einen neuen Besitzer.
-            </p>
-
-        </section>
-
-
-        <!-- KONTAKT -->
-
-        <section id="kontakt" class="kontakt">
-
-            <p class="section-label">
-                KONTAKT
-            </p>
-
-            <h2>
-                Interesse an einem Produkt?
-            </h2>
-
-            <p>
-                Du möchtest etwas kaufen oder hast eine Frage?
-                Schreib uns gerne.
-            </p>
-
-
-            <div class="kontakt-daten">
-
-                <p>
-                    📧 <strong>E-Mail</strong>
-                </p>
-
-                <p>
-                    aliimrangoleli48@gmail.com
-                </p>
-
-                <a
-                    href="https://mail.google.com/mail/?view=cm&fs=1&to=aliimrangoleli48@gmail.com"
-                    target="_blank"
-                    class="button">
-                    📩 E-Mail schreiben
-                </a>
-
-
-                <br><br>
-
-
-                <p>
-                    📱 <strong>WhatsApp</strong>
-                </p>
-
-                <p>
-                    +49 159 08450031
-                </p>
-
-                <a
-                    href="https://wa.me/4915908450031"
-                    target="_blank"
-                    class="button">
-                    💬 WhatsApp schreiben
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p>
-            © 2026 ReVibe – Alle Rechte vorbehalten.
+        <p class="popup-text">
+            Grauer Nike Zipper mit passender Hose.
+            Bei Interesse kannst du uns direkt kontaktieren.
         </p>
 
-    </footer>
+        <div class="contact-options">
 
-
-</body>
-
-</html>
+            <a class="whatsapp
