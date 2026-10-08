@@ -1,0 +1,449 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #111827;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    width: 100%;
+    padding: 25px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #1f2937;
+}
+
+.logo {
+    color: #22c55e;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #22c55e;
+}
+
+
+/* BUTTONS */
+
+.button {
+    display: inline-block;
+
+    background-color: #22c55e;
+    color: #07130b;
+
+    padding: 12px 22px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.button:hover {
+    background-color: #16a34a;
+    transform: translateY(-2px);
+}
+
+
+/* HOME */
+
+.hero {
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 100px 20px;
+}
+
+.welcome {
+    color: #22c55e;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #22c55e;
+}
+
+.description {
+    color: #9ca3af;
+    font-size: 20px;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+
+/* PRODUKTE */
+
+.produkte {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+.section-label {
+    color: #22c55e;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.produkte h2,
+.ueber-uns h2,
+.kontakt h2 {
+    font-size: 45px;
+    margin-bottom: 50px;
+}
+
+
+/* PRODUKT GRID */
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* PRODUKTKARTE */
+
+.product-card {
+    width: 380px;
+
+    background: #0f1f16;
+
+    border: 1px solid #1d4d30;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    text-align: left;
+
+    transition: 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: #22c55e;
+}
+
+
+/* PRODUKTBILD AUF STARTSEITE */
+
+.product-image {
+    width: 100%;
+    height: 300px;
+
+    background: #10251a;
+
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    margin-bottom: 25px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 15px;
+}
+
+
+/* PRODUKT TEXT */
+
+.product-card h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    color: #94a99b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+/* PREIS + BUTTON */
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-bottom span {
+    color: #22c55e;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* ÜBER UNS */
+
+.ueber-uns {
+    padding: 100px 20%;
+    text-align: center;
+}
+
+.ueber-uns p:last-child {
+    color: #94a99b;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* KONTAKT */
+
+.kontakt {
+    padding: 100px 20%;
+    text-align: center;
+}
+
+.kontakt > p {
+    color: #94a99b;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.kontakt-daten {
+    margin-top: 40px;
+}
+
+.kontakt-daten p {
+    margin-bottom: 12px;
+}
+
+.kontakt-daten strong {
+    color: white;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    border-top: 1px solid #1f2937;
+
+    color: #6b7280;
+}
+
+
+/* ========================= */
+/* PRODUKTSEITE */
+/* ========================= */
+
+.produkt-detail {
+    min-height: 80vh;
+
+    padding: 80px 8%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+/* BILD AUF DER PRODUKTSEITE */
+
+.produkt-bild {
+    width: 410px;
+    height: 410px;
+
+    background: #10251a;
+
+    border: 1px solid #1d4d30;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+.produkt-bild img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+}
+
+
+/* PRODUKT-INFOS */
+
+.produkt-info {
+    max-width: 500px;
+}
+
+.produkt-info h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+
+/* PREIS */
+
+.preis {
+    color: #22c55e;
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    margin-bottom: 25px;
+}
+
+
+/* BESCHREIBUNG */
+
+.produkt-info p {
+    color: #94a99b;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.produkt-info strong {
+    color: white;
+
+    font-weight: 700;
+}
+
+
+/* HANDY */
+
+@media (max-width: 800px) {
+
+    nav {
+        padding: 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero {
+        padding: 70px 20px;
+    }
+
+    .produkte h2,
+    .ueber-uns h2,
+    .kontakt h2 {
+        font-size: 35px;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .product-image {
+        height: 280px;
+    }
+
+    .ueber-uns,
+    .kontakt {
+        padding: 80px 20px;
+    }
+
+
+    /* PRODUKTSEITE AUF HANDY */
+
+    .produkt-detail {
+        flex-direction: column;
+
+        gap: 40px;
+
+        padding: 60px 20px;
+    }
+
+    .produkt-bild {
+        width: 100%;
+
+        max-width: 350px;
+
+        height: 350px;
+    }
+
+    .produkt-info h1 {
+        font-size: 40px;
+    }
+
+}
