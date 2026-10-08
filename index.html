@@ -31,7 +31,6 @@
         .logo {
             font-size: 26px;
             font-weight: 800;
-            letter-spacing: 1px;
         }
 
         .contact-btn {
@@ -71,14 +70,13 @@
             width: 340px;
             border-radius: 18px;
             padding: 18px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
             cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: 0.2s;
         }
 
         .product:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.13);
         }
 
         .product img {
@@ -115,7 +113,7 @@
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.65);
+            background: rgba(0,0,0,0.65);
             justify-content: center;
             align-items: center;
             padding: 20px;
@@ -144,7 +142,7 @@
 
         .popup-content img {
             width: 100%;
-            max-height: 330px;
+            max-height: 300px;
             object-fit: contain;
             border-radius: 12px;
             background: #f1f1f1;
@@ -154,7 +152,6 @@
         .popup-content h2 {
             font-size: 25px;
             font-weight: 900;
-            margin-bottom: 8px;
         }
 
         .popup-price {
@@ -236,42 +233,4 @@
 
     <div class="product" onclick="openProduct()">
 
-        <img src="Nike.jpeg" alt="Nike Zipper Set">
-
-        <div class="product-info">
-            <h2>Nike Zipper Set</h2>
-            <p>Grauer Zipper mit passender Hose</p>
-            <div class="price">39,99 €</div>
-        </div>
-
-    </div>
-
-</section>
-
-<footer>
-    © 2026 ReVibe
-</footer>
-
-<!-- PRODUKT-FENSTER -->
-<div class="popup" id="productPopup">
-
-    <div class="popup-content">
-
-        <span class="close" onclick="closeProduct()">×</span>
-
-        <img src="Nike.jpeg" alt="Nike Zipper Set">
-
-        <h2>Nike Zipper Set</h2>
-
-        <div class="popup-price">
-            39,99 €
-        </div>
-
-        <p class="popup-text">
-            Grauer Nike Zipper mit passender Hose.
-            Bei Interesse kannst du uns direkt kontaktieren.
-        </p>
-
-        <div class="contact-options">
-
-            <a class="whatsapp
+        <img src="./Nike.jpeg" alt="Nike Zipper Set">
