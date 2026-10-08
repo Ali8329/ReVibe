@@ -1,236 +1,205 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReVibe</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    <title>ReVibe – Home</title>
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f5f5;
-            color: #111;
-        }
-
-        header {
-            background: #111;
-            color: white;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 25px;
-        }
-
-        .logo {
-            font-size: 26px;
-            font-weight: 800;
-        }
-
-        .contact-btn {
-            background: white;
-            color: #111;
-            border: none;
-            padding: 11px 18px;
-            border-radius: 10px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 55px 20px 35px;
-        }
-
-        .hero h1 {
-            font-size: 42px;
-            font-weight: 900;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            color: #666;
-            font-size: 17px;
-        }
-
-        .products {
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .product {
-            background: white;
-            width: 340px;
-            border-radius: 18px;
-            padding: 18px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .product:hover {
-            transform: translateY(-5px);
-        }
-
-        .product img {
-            width: 100%;
-            height: 280px;
-            object-fit: contain;
-            display: block;
-            border-radius: 12px;
-            background: #f1f1f1;
-        }
-
-        .product-info {
-            padding: 15px 3px 3px;
-        }
-
-        .product-info h2 {
-            font-size: 20px;
-            font-weight: 800;
-            margin-bottom: 6px;
-        }
-
-        .product-info p {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 12px;
-        }
-
-        .price {
-            font-size: 21px;
-            font-weight: 900;
-        }
-
-        .popup {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.65);
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            z-index: 1000;
-        }
-
-        .popup-content {
-            background: white;
-            width: 100%;
-            max-width: 420px;
-            max-height: 90vh;
-            overflow-y: auto;
-            border-radius: 20px;
-            padding: 22px;
-            position: relative;
-        }
-
-        .close {
-            position: absolute;
-            top: 12px;
-            right: 16px;
-            font-size: 28px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .popup-content img {
-            width: 100%;
-            max-height: 300px;
-            object-fit: contain;
-            border-radius: 12px;
-            background: #f1f1f1;
-            margin-bottom: 15px;
-        }
-
-        .popup-content h2 {
-            font-size: 25px;
-            font-weight: 900;
-        }
-
-        .popup-price {
-            font-size: 22px;
-            font-weight: 900;
-            margin: 12px 0;
-        }
-
-        .popup-text {
-            color: #555;
-            line-height: 1.5;
-            margin-bottom: 18px;
-        }
-
-        .contact-options {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .contact-options a {
-            text-decoration: none;
-            text-align: center;
-            padding: 13px;
-            border-radius: 10px;
-            font-weight: bold;
-        }
-
-        .whatsapp {
-            background: #25D366;
-            color: white;
-        }
-
-        .email {
-            background: #111;
-            color: white;
-        }
-
-        footer {
-            text-align: center;
-            color: #777;
-            font-size: 13px;
-            padding: 45px 20px 25px;
-        }
-
-        @media (max-width: 500px) {
-            .hero h1 {
-                font-size: 34px;
-            }
-
-            .product {
-                width: 100%;
-                max-width: 340px;
-            }
-
-            .product img {
-                height: 250px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <div class="logo">ReVibe</div>
+    <!-- NAVIGATION -->
 
-    <button class="contact-btn" onclick="openContact()">
-        Kontakt
-    </button>
-</header>
+    <nav>
 
-<section class="hero">
-    <h1>ReVibe</h1>
-    <p>Dein Style. Dein Vibe.</p>
-</section>
+        <div class="logo">
+            ReVibe
+        </div>
 
-<section class="products">
+        <div class="nav-links">
 
-    <div class="product" onclick="openProduct()">
+            <a href="index.html">
+                Home
+            </a>
 
-        <img src="./Nike.jpeg" alt="Nike Zipper Set">
+            <a href="#produkte">
+                Produkte
+            </a>
+
+            <a href="#ueber-uns">
+                Über uns
+            </a>
+
+            <a href="#kontakt">
+                Kontakt
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HOME -->
+
+    <main>
+
+        <section class="hero">
+
+            <p class="welcome">
+                WILLKOMMEN BEI REVIBE
+            </p>
+
+            <h1>
+                Dein Style.<br>
+                <span>Dein Vibe.</span>
+            </h1>
+
+            <p class="description">
+                Entdecke ausgewählte Streetwear zu fairen Preisen.
+                Gebraucht, hochwertig und bereit für einen neuen Vibe.
+            </p>
+
+            <a href="#produkte" class="button">
+                Produkte entdecken
+            </a>
+
+        </section>
+
+
+        <!-- PRODUKTE -->
+
+        <section class="produkte" id="produkte">
+
+            <p class="section-label">
+                UNSER PRODUKT
+            </p>
+
+            <h2>
+                Aktuell verfügbar
+            </h2>
+
+
+            <div class="product-grid">
+
+                <div class="product-card">
+
+                    <a href="produkt.html" style="text-decoration: none; color: inherit;">
+
+                        <div class="product-image">
+
+                            <img
+                                src="bilder/Nike.jpeg"
+                                alt="Nike Zipper mit passender Hose">
+
+                        </div>
+
+
+                        <h3>
+                            Nike Zipper + Hose
+                        </h3>
+
+                        <p>
+                            Grauer Nike Zipper mit passender Hose.
+                            Sehr guter Zustand und nur wenig getragen.
+                        </p>
+
+
+                        <div class="product-bottom">
+
+                            <span>
+                                49,99 €
+                            </span>
+
+                            <span>
+                                →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ÜBER UNS -->
+
+        <section class="ueber-uns" id="ueber-uns">
+
+            <p class="section-label">
+                ÜBER REVIBE
+            </p>
+
+            <h2>
+                Secondhand mit Vibe.
+            </h2>
+
+            <p>
+                ReVibe steht für hochwertige Kleidung,
+                faire Preise und einen neuen Vibe für
+                bereits getragene Pieces.
+            </p>
+
+        </section>
+
+
+        <!-- KONTAKT -->
+
+        <section class="kontakt" id="kontakt">
+
+            <p class="section-label">
+                KONTAKT
+            </p>
+
+            <h2>
+                Interesse?
+            </h2>
+
+            <p>
+                Du hast Fragen zu einem Produkt oder möchtest
+                etwas kaufen? Schreib uns einfach.
+            </p>
+
+            <div class="kontakt-daten">
+
+                <p>
+                    📧
+                    <strong>
+                        aliimrangoleli48@gmail.com
+                    </strong>
+                </p>
+
+                <p>
+                    📱
+                    <strong>
+                        WhatsApp: +49 159 08450031
+                    </strong>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 ReVibe – Alle Rechte vorbehalten.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
