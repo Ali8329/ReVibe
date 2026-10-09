@@ -1,57 +1,85 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ReVibe – Home</title>
-
+    <title>ReVibe – Streetwear</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .product-card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .product-image img {
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
+            display: block;
+            margin: auto;
+        }
+
+        .product-card p {
+            font-weight: 600;
+        }
+
+        .product-bottom span {
+            font-weight: 800;
+        }
+
+        .hero .button,
+        .product-card,
+        .kontakt a {
+            transition: 0.25s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .kontakt a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                gap: 10px;
+            }
+
+            .logo {
+                font-size: 23px;
+            }
+
+            .hero h1 {
+                font-size: 44px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
-
     <nav>
-
-        <div class="logo">
-            ReVibe
-        </div>
+        <div class="logo">ReVibe</div>
 
         <div class="nav-links">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="#produkte">
-                Produkte
-            </a>
-
-            <a href="#ueber-uns">
-                Über uns
-            </a>
-
-            <a href="#kontakt">
-                Kontakt
-            </a>
-
+            <a href="index.html">Home</a>
+            <a href="#produkte">Produkte</a>
+            <a href="#ueber-uns">Über uns</a>
+            <a href="#kontakt">Kontakt</a>
         </div>
-
     </nav>
-
-
-    <!-- HOME -->
 
     <main>
 
         <section class="hero">
-
-            <p class="welcome">
-                WILLKOMMEN BEI REVIBE
-            </p>
+            <p class="welcome">WILLKOMMEN BEI REVIBE</p>
 
             <h1>
                 Dein Style.<br>
@@ -59,147 +87,94 @@
             </h1>
 
             <p class="description">
-                Entdecke ausgewählte Streetwear zu fairen Preisen.
-                Gebraucht, hochwertig und bereit für einen neuen Vibe.
+                Entdecke besondere Streetwear zu fairen Preisen.
+                Dein nächstes Lieblingsstück wartet auf dich.
             </p>
 
             <a href="#produkte" class="button">
-                Produkte entdecken
+                Produkte entdecken →
             </a>
-
         </section>
 
-
-        <!-- PRODUKTE -->
-
         <section class="produkte" id="produkte">
-
-            <p class="section-label">
-                UNSER PRODUKT
-            </p>
-
-            <h2>
-                Aktuell verfügbar
-            </h2>
-
+            <p class="section-label">UNSER PRODUKT</p>
+            <h2>Aktuell verfügbar</h2>
 
             <div class="product-grid">
-
                 <div class="product-card">
-
-                    <a href="produkt.html" style="text-decoration: none; color: inherit;">
+                    <a href="produkt.html">
 
                         <div class="product-image">
-
-                            <img
-                                src="bilder/Nike.jpeg"
-                                alt="Nike Zipper mit passender Hose">
-
+                            <!-- Bild liegt direkt neben index.html -->
+                            <img src="./Nike.jpeg"
+                                 alt="Nike Zipper mit passender Hose"
+                                 onerror="this.onerror=null;this.src='bilder/Nike.jpeg';">
                         </div>
 
-
-                        <h3>
-                            Nike Zipper + Hose
-                        </h3>
+                        <h3>Nike Zipper + Hose</h3>
 
                         <p>
-                            Grauer Nike Zipper mit passender Hose.
-                            Sehr guter Zustand und nur wenig getragen.
+                            Grauer Zipper mit passender Hose.
+                            Sehr guter Zustand, wenig getragen.
                         </p>
 
-
                         <div class="product-bottom">
-
-                            <span>
-                                49,99 €
-                            </span>
-
-                            <span>
-                                →
-                            </span>
-
+                            <span>20,00 €</span>
+                            <span>Details →</span>
                         </div>
 
                     </a>
-
                 </div>
-
             </div>
-
         </section>
-
-
-        <!-- ÜBER UNS -->
 
         <section class="ueber-uns" id="ueber-uns">
-
-            <p class="section-label">
-                ÜBER REVIBE
-            </p>
-
-            <h2>
-                Secondhand mit Vibe.
-            </h2>
+            <p class="section-label">ÜBER REVIBE</p>
+            <h2>Secondhand mit Vibe.</h2>
 
             <p>
-                ReVibe steht für hochwertige Kleidung,
-                faire Preise und einen neuen Vibe für
-                bereits getragene Pieces.
+                ReVibe steht für coole Kleidung, faire Preise
+                und ausgewählte Pieces, die einen neuen Besitzer
+                verdienen.
             </p>
-
         </section>
 
-
-        <!-- KONTAKT -->
-
         <section class="kontakt" id="kontakt">
-
-            <p class="section-label">
-                KONTAKT
-            </p>
-
-            <h2>
-                Interesse?
-            </h2>
+            <p class="section-label">KONTAKT</p>
+            <h2>Interesse?</h2>
 
             <p>
-                Du hast Fragen zu einem Produkt oder möchtest
-                etwas kaufen? Schreib uns einfach.
+                Du hast Fragen oder möchtest etwas kaufen?
+                Schreib uns einfach!
             </p>
 
             <div class="kontakt-daten">
-
                 <p>
-                    📧
-                    <strong>
-                        aliimrangoleli48@gmail.com
-                    </strong>
+                    <strong>E-Mail:</strong>
+                    aliimrangoleli48@gmail.com
                 </p>
 
-                <p>
-                    📱
-                    <strong>
-                        WhatsApp: +49 159 08450031
-                    </strong>
-                </p>
+                <a class="button"
+                   href="https://wa.me/4915908450031?text=Hey%20ReVibe%2C%20ich%20interessiere%20mich%20f%C3%BCr%20den%20Nike%20Zipper%20mit%20Hose."
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    💬 Über WhatsApp anfragen
+                </a>
 
+                <br>
+
+                <a class="button"
+                   href="mailto:aliimrangoleli48@gmail.com?subject=Interesse%20an%20Nike%20Zipper%20%2B%20Hose">
+                    📧 E-Mail schreiben
+                </a>
             </div>
-
         </section>
 
     </main>
 
-
-    <!-- FOOTER -->
-
     <footer>
-
-        <p>
-            © 2026 ReVibe – Alle Rechte vorbehalten.
-        </p>
-
+        <p>© 2026 ReVibe – Alle Rechte vorbehalten.</p>
     </footer>
 
 </body>
-
 </html>
